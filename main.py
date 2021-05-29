@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QApplication,QMainWindow
 from PyQt5.QtGui import QPalette
-import dialog
-import denglu
+
+
 import sys
 import serial
 import serial.tools.list_ports

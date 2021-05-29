@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="img">
+    <file>qrc/guowang.jpg</file>
+    <file>qrc/标志.png</file>
+    <file>qrc/国网1.png</file>
+  </qresource>
+</RCC>

@@ -14,7 +14,8 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#Form{border-image: url(:/image/guowang.jpg);}
+   <string notr="true">QWidget#Form{border-image:url(:/img/qrc/guowang.jpg); }
+
 
 QLabel#titleLabel{font: 15pt &quot;华文中宋&quot;;}
 QLabel#usernameLabel{color:rgb(255, 255, 255);}
@@ -115,14 +116,14 @@ QLabel#returnMsg{font: 15pt;color:rgb(255, 255, 255);}
   <widget class="QLabel" name="titleLabel">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>160</x>
      <y>30</y>
      <width>311</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>智能可视化监控设备电源检测管理</string>
+    <string>智能可视化监控设备蓄电池检测</string>
    </property>
   </widget>
   <widget class="Line" name="line">
@@ -140,7 +141,7 @@ QLabel#returnMsg{font: 15pt;color:rgb(255, 255, 255);}
   </widget>
  </widget>
  <resources>
-  <include location="qrc/guowang.qrc"/>
+  <include location="guowang.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -15,7 +15,9 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(674, 562)
-        Form.setStyleSheet("QWidget#Form{border-image: url(:/image/guowang.jpg);}")
+        Form.setStyleSheet("QWidget#Form{border-image: url(:/img/qrc/guowang.jpg);}\n"
+"\n"
+"")
         self.pushButton = QtWidgets.QPushButton(Form)
         self.pushButton.setGeometry(QtCore.QRect(440, 500, 80, 30))
         self.pushButton.setObjectName("pushButton")
@@ -95,7 +97,7 @@ class Ui_Form(object):
         self.pushButton.setText(_translate("Form", "应用"))
         self.pushButton_2.setText(_translate("Form", "确认"))
         self.pushButton_3.setText(_translate("Form", "取消"))
-        self.groupBox.setTitle(_translate("Form", "串口设置"))
+        self.groupBox.setTitle(_translate("Form", "电子负载串口设置"))
         self.label.setText(_translate("Form", "串口号："))
         self.label_2.setText(_translate("Form", "波特率："))
         self.label_3.setText(_translate("Form", "数据位："))
@@ -109,4 +111,4 @@ class Ui_Form(object):
         self.label_8.setText(_translate("Form", "更新IP："))
         self.pushButton_6.setText(_translate("Form", "开始配置"))
         self.pushButton_7.setText(_translate("Form", "取消"))
-import Power_Management.qrc.guowang_rc
+import guowang_rc

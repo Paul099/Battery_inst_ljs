@@ -14,7 +14,9 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#Form{border-image: url(:/image/guowang.jpg);}</string>
+   <string notr="true">QWidget#Form{border-image: url(:/img/qrc/guowang.jpg);}
+
+</string>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
@@ -65,7 +67,7 @@
     </rect>
    </property>
    <property name="title">
-    <string>串口设置</string>
+    <string>电子负载串口设置</string>
    </property>
    <widget class="QComboBox" name="comboBox">
     <property name="geometry">
@@ -300,6 +302,7 @@
  </widget>
  <resources>
   <include location="qrc/guowang.qrc"/>
+  <include location="guowang.qrc"/>
  </resources>
  <connections/>
 </ui>

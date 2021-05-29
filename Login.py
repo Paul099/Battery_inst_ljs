@@ -15,7 +15,8 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(580, 420)
-        Form.setStyleSheet("QWidget#Form{border-image: url(:/image/guowang.jpg);}\n"
+        Form.setStyleSheet("QWidget#Form{border-image:url(:/img/qrc/guowang.jpg); }\n"
+"\n"
 "\n"
 "QLabel#titleLabel{font: 15pt \"华文中宋\";}\n"
 "QLabel#usernameLabel{color:rgb(255, 255, 255);}\n"
@@ -47,7 +48,7 @@ class Ui_Form(object):
         self.returnMsg.setGeometry(QtCore.QRect(160, 350, 241, 31))
         self.returnMsg.setObjectName("returnMsg")
         self.titleLabel = QtWidgets.QLabel(Form)
-        self.titleLabel.setGeometry(QtCore.QRect(180, 30, 311, 20))
+        self.titleLabel.setGeometry(QtCore.QRect(160, 30, 311, 20))
         self.titleLabel.setObjectName("titleLabel")
         self.line = QtWidgets.QFrame(Form)
         self.line.setGeometry(QtCore.QRect(140, 200, 251, 20))
@@ -66,5 +67,5 @@ class Ui_Form(object):
         self.pushButtonLogin.setText(_translate("Form", "登录"))
         self.pushButtonExit.setText(_translate("Form", "退出"))
         self.returnMsg.setText(_translate("Form", "returnMsg"))
-        self.titleLabel.setText(_translate("Form", "智能可视化监控设备电源检测管理"))
-import Power_Management.qrc.guowang_rc
+        self.titleLabel.setText(_translate("Form", "智能可视化监控设备蓄电池检测"))
+import guowang_rc

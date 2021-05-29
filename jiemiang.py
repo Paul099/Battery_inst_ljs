@@ -14,11 +14,29 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(583, 436)
+        Form.resize(595, 517)
+        Form.setStyleSheet("*{\n"
+"    \n"
+"    font: 12pt \"微软雅黑\";\n"
+"    color:rgb(0, 0, 0)\n"
+"}\n"
+"QLabel{color:rgb(0, 0, 0)}\n"
+"\n"
+"QWidget#Form{border-image: url(:/img/qrc/guowang.jpg);}\n"
+"\n"
+"\n"
+"QTabWidget:pane {\n"
+"    border-top:0px solid #e8f3f9;\n"
+"     \n"
+"    background-color:rgba(2, 79, 67, 170);\n"
+"    \n"
+"    }\n"
+"")
         self.tabWidget = QtWidgets.QTabWidget(Form)
-        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 591, 421))
-        self.tabWidget.setStyleSheet("QTabWidget{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}\n"
-"font: 14pt \"黑体\";")
+        self.tabWidget.setGeometry(QtCore.QRect(0, 70, 591, 441))
+        self.tabWidget.setStyleSheet("QTabWidget{background-image: url(:/img/qrc/guowang.jpg);}\n"
+"font: 14pt \"黑体\";\n"
+"")
         self.tabWidget.setObjectName("tabWidget")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
@@ -50,7 +68,7 @@ class Ui_Form(object):
         self.label.setStyleSheet("color: rgb(255, 255, 255);")
         self.label.setObjectName("label")
         self.layoutWidget = QtWidgets.QWidget(self.groupBox_31)
-        self.layoutWidget.setGeometry(QtCore.QRect(0, 20, 356, 21))
+        self.layoutWidget.setGeometry(QtCore.QRect(0, 20, 356, 23))
         self.layoutWidget.setObjectName("layoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -84,7 +102,7 @@ class Ui_Form(object):
         self.lineEdit.setGeometry(QtCore.QRect(420, 80, 113, 20))
         self.lineEdit.setObjectName("lineEdit")
         self.layoutWidget1 = QtWidgets.QWidget(self.groupBox_15)
-        self.layoutWidget1.setGeometry(QtCore.QRect(360, 190, 181, 181))
+        self.layoutWidget1.setGeometry(QtCore.QRect(360, 190, 181, 188))
         self.layoutWidget1.setObjectName("layoutWidget1")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget1)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -137,7 +155,7 @@ class Ui_Form(object):
         self.tab_6 = QtWidgets.QWidget()
         self.tab_6.setObjectName("tab_6")
         self.groupBox_19 = QtWidgets.QGroupBox(self.tab_6)
-        self.groupBox_19.setGeometry(QtCore.QRect(0, 0, 591, 381))
+        self.groupBox_19.setGeometry(QtCore.QRect(0, 0, 590, 390))
         self.groupBox_19.setStyleSheet("QGroupBox#groupBox_19{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}")
         self.groupBox_19.setTitle("")
         self.groupBox_19.setObjectName("groupBox_19")
@@ -150,7 +168,7 @@ class Ui_Form(object):
         self.label_5.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_5.setObjectName("label_5")
         self.layoutWidget_4 = QtWidgets.QWidget(self.groupBox_33)
-        self.layoutWidget_4.setGeometry(QtCore.QRect(0, 20, 356, 21))
+        self.layoutWidget_4.setGeometry(QtCore.QRect(0, 20, 356, 23))
         self.layoutWidget_4.setObjectName("layoutWidget_4")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.layoutWidget_4)
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
@@ -188,7 +206,7 @@ class Ui_Form(object):
         self.pushButton_3.setGeometry(QtCore.QRect(420, 120, 71, 21))
         self.pushButton_3.setObjectName("pushButton_3")
         self.layoutWidget2 = QtWidgets.QWidget(self.groupBox_19)
-        self.layoutWidget2.setGeometry(QtCore.QRect(360, 170, 181, 201))
+        self.layoutWidget2.setGeometry(QtCore.QRect(360, 170, 181, 217))
         self.layoutWidget2.setObjectName("layoutWidget2")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.layoutWidget2)
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
@@ -272,7 +290,7 @@ class Ui_Form(object):
         self.label_3.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_3.setObjectName("label_3")
         self.layoutWidget3 = QtWidgets.QWidget(self.groupBox_32)
-        self.layoutWidget3.setGeometry(QtCore.QRect(0, 20, 356, 21))
+        self.layoutWidget3.setGeometry(QtCore.QRect(0, 20, 356, 23))
         self.layoutWidget3.setObjectName("layoutWidget3")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.layoutWidget3)
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -306,7 +324,7 @@ class Ui_Form(object):
         self.lineEdit_2.setGeometry(QtCore.QRect(420, 80, 113, 20))
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.layoutWidget_2 = QtWidgets.QWidget(self.groupBox_16)
-        self.layoutWidget_2.setGeometry(QtCore.QRect(360, 190, 181, 181))
+        self.layoutWidget_2.setGeometry(QtCore.QRect(360, 190, 181, 188))
         self.layoutWidget_2.setObjectName("layoutWidget_2")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.layoutWidget_2)
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -359,7 +377,7 @@ class Ui_Form(object):
         self.tab_8 = QtWidgets.QWidget()
         self.tab_8.setObjectName("tab_8")
         self.groupBox_20 = QtWidgets.QGroupBox(self.tab_8)
-        self.groupBox_20.setGeometry(QtCore.QRect(0, 0, 591, 381))
+        self.groupBox_20.setGeometry(QtCore.QRect(0, 0, 590, 390))
         self.groupBox_20.setStyleSheet("QGroupBox#groupBox_20{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}")
         self.groupBox_20.setTitle("")
         self.groupBox_20.setObjectName("groupBox_20")
@@ -372,7 +390,7 @@ class Ui_Form(object):
         self.label_8.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_8.setObjectName("label_8")
         self.layoutWidget_5 = QtWidgets.QWidget(self.groupBox_34)
-        self.layoutWidget_5.setGeometry(QtCore.QRect(0, 20, 356, 21))
+        self.layoutWidget_5.setGeometry(QtCore.QRect(0, 20, 356, 23))
         self.layoutWidget_5.setObjectName("layoutWidget_5")
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.layoutWidget_5)
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
@@ -410,7 +428,7 @@ class Ui_Form(object):
         self.pushButton_4.setGeometry(QtCore.QRect(420, 120, 71, 21))
         self.pushButton_4.setObjectName("pushButton_4")
         self.layoutWidget_6 = QtWidgets.QWidget(self.groupBox_20)
-        self.layoutWidget_6.setGeometry(QtCore.QRect(360, 170, 181, 201))
+        self.layoutWidget_6.setGeometry(QtCore.QRect(360, 170, 181, 217))
         self.layoutWidget_6.setObjectName("layoutWidget_6")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.layoutWidget_6)
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
@@ -494,7 +512,7 @@ class Ui_Form(object):
         self.label_10.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_10.setObjectName("label_10")
         self.layoutWidget_7 = QtWidgets.QWidget(self.groupBox_35)
-        self.layoutWidget_7.setGeometry(QtCore.QRect(0, 20, 356, 21))
+        self.layoutWidget_7.setGeometry(QtCore.QRect(0, 20, 356, 23))
         self.layoutWidget_7.setObjectName("layoutWidget_7")
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.layoutWidget_7)
         self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
@@ -528,7 +546,7 @@ class Ui_Form(object):
         self.lineEdit_5.setGeometry(QtCore.QRect(420, 80, 113, 20))
         self.lineEdit_5.setObjectName("lineEdit_5")
         self.layoutWidget_8 = QtWidgets.QWidget(self.groupBox_17)
-        self.layoutWidget_8.setGeometry(QtCore.QRect(360, 190, 181, 181))
+        self.layoutWidget_8.setGeometry(QtCore.QRect(360, 190, 181, 188))
         self.layoutWidget_8.setObjectName("layoutWidget_8")
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.layoutWidget_8)
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
@@ -581,7 +599,7 @@ class Ui_Form(object):
         self.tab_10 = QtWidgets.QWidget()
         self.tab_10.setObjectName("tab_10")
         self.groupBox_21 = QtWidgets.QGroupBox(self.tab_10)
-        self.groupBox_21.setGeometry(QtCore.QRect(0, 0, 591, 381))
+        self.groupBox_21.setGeometry(QtCore.QRect(0, 0, 590, 390))
         self.groupBox_21.setStyleSheet("QGroupBox#groupBox_21{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}")
         self.groupBox_21.setTitle("")
         self.groupBox_21.setObjectName("groupBox_21")
@@ -594,7 +612,7 @@ class Ui_Form(object):
         self.label_12.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_12.setObjectName("label_12")
         self.layoutWidget_9 = QtWidgets.QWidget(self.groupBox_36)
-        self.layoutWidget_9.setGeometry(QtCore.QRect(0, 20, 356, 21))
+        self.layoutWidget_9.setGeometry(QtCore.QRect(0, 20, 356, 23))
         self.layoutWidget_9.setObjectName("layoutWidget_9")
         self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.layoutWidget_9)
         self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
@@ -632,7 +650,7 @@ class Ui_Form(object):
         self.pushButton_6.setGeometry(QtCore.QRect(420, 120, 71, 21))
         self.pushButton_6.setObjectName("pushButton_6")
         self.layoutWidget_10 = QtWidgets.QWidget(self.groupBox_21)
-        self.layoutWidget_10.setGeometry(QtCore.QRect(360, 170, 181, 201))
+        self.layoutWidget_10.setGeometry(QtCore.QRect(360, 170, 181, 217))
         self.layoutWidget_10.setObjectName("layoutWidget_10")
         self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.layoutWidget_10)
         self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
@@ -716,7 +734,7 @@ class Ui_Form(object):
         self.label_14.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_14.setObjectName("label_14")
         self.layoutWidget_11 = QtWidgets.QWidget(self.groupBox_37)
-        self.layoutWidget_11.setGeometry(QtCore.QRect(0, 20, 356, 21))
+        self.layoutWidget_11.setGeometry(QtCore.QRect(0, 20, 356, 23))
         self.layoutWidget_11.setObjectName("layoutWidget_11")
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.layoutWidget_11)
         self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
@@ -750,7 +768,7 @@ class Ui_Form(object):
         self.lineEdit_7.setGeometry(QtCore.QRect(420, 80, 113, 20))
         self.lineEdit_7.setObjectName("lineEdit_7")
         self.layoutWidget_12 = QtWidgets.QWidget(self.groupBox_18)
-        self.layoutWidget_12.setGeometry(QtCore.QRect(360, 190, 181, 181))
+        self.layoutWidget_12.setGeometry(QtCore.QRect(360, 190, 181, 188))
         self.layoutWidget_12.setObjectName("layoutWidget_12")
         self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.layoutWidget_12)
         self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
@@ -803,7 +821,7 @@ class Ui_Form(object):
         self.tab_12 = QtWidgets.QWidget()
         self.tab_12.setObjectName("tab_12")
         self.groupBox_22 = QtWidgets.QGroupBox(self.tab_12)
-        self.groupBox_22.setGeometry(QtCore.QRect(0, 0, 591, 381))
+        self.groupBox_22.setGeometry(QtCore.QRect(0, 0, 590, 390))
         self.groupBox_22.setStyleSheet("QGroupBox#groupBox_22{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}")
         self.groupBox_22.setTitle("")
         self.groupBox_22.setObjectName("groupBox_22")
@@ -816,7 +834,7 @@ class Ui_Form(object):
         self.label_16.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_16.setObjectName("label_16")
         self.layoutWidget_13 = QtWidgets.QWidget(self.groupBox_38)
-        self.layoutWidget_13.setGeometry(QtCore.QRect(0, 20, 356, 21))
+        self.layoutWidget_13.setGeometry(QtCore.QRect(0, 20, 356, 23))
         self.layoutWidget_13.setObjectName("layoutWidget_13")
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.layoutWidget_13)
         self.horizontalLayout_9.setContentsMargins(0, 0, 0, 0)
@@ -854,7 +872,7 @@ class Ui_Form(object):
         self.pushButton_8.setGeometry(QtCore.QRect(420, 120, 71, 21))
         self.pushButton_8.setObjectName("pushButton_8")
         self.layoutWidget_14 = QtWidgets.QWidget(self.groupBox_22)
-        self.layoutWidget_14.setGeometry(QtCore.QRect(360, 170, 181, 201))
+        self.layoutWidget_14.setGeometry(QtCore.QRect(360, 170, 181, 217))
         self.layoutWidget_14.setObjectName("layoutWidget_14")
         self.verticalLayout_8 = QtWidgets.QVBoxLayout(self.layoutWidget_14)
         self.verticalLayout_8.setContentsMargins(0, 0, 0, 0)
@@ -911,7 +929,7 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
         self.tabWidget.setCurrentIndex(3)
-        self.tabWidget_2.setCurrentIndex(1)
+        self.tabWidget_2.setCurrentIndex(0)
         self.tabWidget_3.setCurrentIndex(1)
         self.tabWidget_4.setCurrentIndex(1)
         self.tabWidget_5.setCurrentIndex(1)
