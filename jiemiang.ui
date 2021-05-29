@@ -6,28 +6,40 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>583</width>
-    <height>436</height>
+    <width>595</width>
+    <height>517</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#Form{border-image: url(:/img/qrc/guowang.jpg);}
+
+
+QTabWidget:pane {
+	border-top:0px solid #e8f3f9;
+	 
+	background-color:rgba(2, 79, 67, 170);
+	
+	}</string>
+  </property>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
+     <y>70</y>
      <width>591</width>
-     <height>421</height>
+     <height>441</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QTabWidget{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}
-font: 14pt &quot;黑体&quot;;</string>
+    <string notr="true">QTabWidget{background-image: url(:/img/qrc/guowang.jpg);}
+font: 14pt &quot;黑体&quot;;
+</string>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
@@ -49,7 +61,7 @@ color: rgb(255, 255, 255);
 color: rgb(0, 0, 0);</string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <property name="iconSize">
       <size>
@@ -126,7 +138,7 @@ color: rgb(0, 0, 0);</string>
            <x>0</x>
            <y>20</y>
            <width>356</width>
-           <height>21</height>
+           <height>23</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout">
@@ -208,7 +220,7 @@ font: 11pt &quot;黑体&quot;;</string>
           <x>360</x>
           <y>190</y>
           <width>181</width>
-          <height>181</height>
+          <height>188</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
@@ -305,8 +317,8 @@ border-color: rgb(255, 255, 255);</string>
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>591</width>
-         <height>381</height>
+         <width>590</width>
+         <height>390</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -352,7 +364,7 @@ border-color: rgb(255, 255, 255);</string>
            <x>0</x>
            <y>20</y>
            <width>356</width>
-           <height>21</height>
+           <height>23</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -447,7 +459,7 @@ font: 11pt &quot;黑体&quot;;</string>
           <x>360</x>
           <y>170</y>
           <width>181</width>
-          <height>201</height>
+          <height>217</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -643,7 +655,7 @@ color: rgb(0, 0, 0);</string>
            <x>0</x>
            <y>20</y>
            <width>356</width>
-           <height>21</height>
+           <height>23</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -725,7 +737,7 @@ font: 11pt &quot;黑体&quot;;</string>
           <x>360</x>
           <y>190</y>
           <width>181</width>
-          <height>181</height>
+          <height>188</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -822,8 +834,8 @@ border-color: rgb(255, 255, 255);</string>
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>591</width>
-         <height>381</height>
+         <width>590</width>
+         <height>390</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -869,7 +881,7 @@ border-color: rgb(255, 255, 255);</string>
            <x>0</x>
            <y>20</y>
            <width>356</width>
-           <height>21</height>
+           <height>23</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -964,7 +976,7 @@ font: 11pt &quot;黑体&quot;;</string>
           <x>360</x>
           <y>170</y>
           <width>181</width>
-          <height>201</height>
+          <height>217</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -1160,7 +1172,7 @@ color: rgb(0, 0, 0);</string>
            <x>0</x>
            <y>20</y>
            <width>356</width>
-           <height>21</height>
+           <height>23</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -1242,7 +1254,7 @@ font: 11pt &quot;黑体&quot;;</string>
           <x>360</x>
           <y>190</y>
           <width>181</width>
-          <height>181</height>
+          <height>188</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -1339,8 +1351,8 @@ border-color: rgb(255, 255, 255);</string>
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>591</width>
-         <height>381</height>
+         <width>590</width>
+         <height>390</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -1386,7 +1398,7 @@ border-color: rgb(255, 255, 255);</string>
            <x>0</x>
            <y>20</y>
            <width>356</width>
-           <height>21</height>
+           <height>23</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1481,7 +1493,7 @@ font: 11pt &quot;黑体&quot;;</string>
           <x>360</x>
           <y>170</y>
           <width>181</width>
-          <height>201</height>
+          <height>217</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -1677,7 +1689,7 @@ color: rgb(0, 0, 0);</string>
            <x>0</x>
            <y>20</y>
            <width>356</width>
-           <height>21</height>
+           <height>23</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -1759,7 +1771,7 @@ font: 11pt &quot;黑体&quot;;</string>
           <x>360</x>
           <y>190</y>
           <width>181</width>
-          <height>181</height>
+          <height>188</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -1856,8 +1868,8 @@ border-color: rgb(255, 255, 255);</string>
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>591</width>
-         <height>381</height>
+         <width>590</width>
+         <height>390</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -1903,7 +1915,7 @@ border-color: rgb(255, 255, 255);</string>
            <x>0</x>
            <y>20</y>
            <width>356</width>
-           <height>21</height>
+           <height>23</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_9">
@@ -1998,7 +2010,7 @@ font: 11pt &quot;黑体&quot;;</string>
           <x>360</x>
           <y>170</y>
           <width>181</width>
-          <height>201</height>
+          <height>217</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_8">
