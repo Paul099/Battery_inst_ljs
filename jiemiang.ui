@@ -1,0 +1,2106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>583</width>
+    <height>436</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>591</width>
+     <height>421</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabWidget{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}
+font: 14pt &quot;黑体&quot;;</string>
+   </property>
+   <property name="currentIndex">
+    <number>3</number>
+   </property>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>设备1</string>
+    </attribute>
+    <widget class="QTabWidget" name="tabWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>601</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">alternate-background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:0.0681818 rgba(80, 118, 149, 255), stop:1 rgba(255, 255, 255, 255));
+font: 11pt &quot;黑体&quot;;
+color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>15</width>
+       <height>15</height>
+      </size>
+     </property>
+     <widget class="QWidget" name="tab_5">
+      <attribute name="title">
+       <string>充电</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_15">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>591</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox#groupBox_15{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QGraphicsView" name="F3_view_11">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>321</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_31">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>531</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="title">
+         <string>扫描信息</string>
+        </property>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>400</x>
+           <y>20</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>充电中</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>356</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_96">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;
+color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>生产厂家</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_96"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_99">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;</string>
+            </property>
+            <property name="text">
+             <string>设备型号</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_99"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>120</y>
+          <width>71</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>设备检索</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>80</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 11pt &quot;黑体&quot;;</string>
+        </property>
+        <property name="text">
+         <string>设备编号</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>80</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>190</y>
+          <width>181</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label_79">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+
+</string>
+           </property>
+           <property name="text">
+            <string>充电电流（A）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_81">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_78">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>充电电压（V）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_79">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_81">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>充电电量（mAh）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_80">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_80">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>充电时长（min）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_78">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_6">
+      <attribute name="title">
+       <string>放电</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_19">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>591</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox#groupBox_19{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QGroupBox" name="groupBox_33">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>531</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="title">
+         <string>扫描信息</string>
+        </property>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>400</x>
+           <y>20</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>充电中</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>356</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_102">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;
+color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>生产厂家</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_102"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_103">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;</string>
+            </property>
+            <property name="text">
+             <string>设备型号</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_103"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGraphicsView" name="F3_view_13">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>321</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_3">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>80</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>80</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 11pt &quot;黑体&quot;;</string>
+        </property>
+        <property name="text">
+         <string>设备编号</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>120</y>
+          <width>71</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>设备检索</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>170</y>
+          <width>181</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_109">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>放电电流（A）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_111">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_108">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>放电电压（V）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_109">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_111">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>终止电压（V）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_110">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_110">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>电池容量</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_108">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_35">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(138, 0, 0);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>开始</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>设备2</string>
+    </attribute>
+    <widget class="QTabWidget" name="tabWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>601</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">alternate-background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:0.0681818 rgba(80, 118, 149, 255), stop:1 rgba(255, 255, 255, 255));
+font: 11pt &quot;黑体&quot;;
+color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>15</width>
+       <height>15</height>
+      </size>
+     </property>
+     <widget class="QWidget" name="tab_7">
+      <attribute name="title">
+       <string>充电</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_16">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>591</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox#groupBox_16{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QGraphicsView" name="F3_view_12">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>321</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_32">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>531</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="title">
+         <string>扫描信息</string>
+        </property>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>400</x>
+           <y>20</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>充电中</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>356</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_97">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;
+color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>生产厂家</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_97"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_100">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;</string>
+            </property>
+            <property name="text">
+             <string>设备型号</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_100"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>120</y>
+          <width>71</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>设备检索</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>80</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 11pt &quot;黑体&quot;;</string>
+        </property>
+        <property name="text">
+         <string>设备编号</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_2">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>80</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>190</y>
+          <width>181</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_82">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+
+</string>
+           </property>
+           <property name="text">
+            <string>充电电流（A）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_82">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_83">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>充电电压（V）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_83">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_84">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>充电电量（mAh）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_84">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_85">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>充电时长（min）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_85">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_8">
+      <attribute name="title">
+       <string>放电</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_20">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>591</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox#groupBox_20{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QGroupBox" name="groupBox_34">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>531</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="title">
+         <string>扫描信息</string>
+        </property>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>410</x>
+           <y>20</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>充电中</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget_5">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>356</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_104">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;
+color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>生产厂家</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_104"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_105">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;</string>
+            </property>
+            <property name="text">
+             <string>设备型号</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_105"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGraphicsView" name="F3_view_14">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>321</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_4">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>80</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>80</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 11pt &quot;黑体&quot;;</string>
+        </property>
+        <property name="text">
+         <string>设备编号</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>120</y>
+          <width>71</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>设备检索</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_6">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>170</y>
+          <width>181</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_112">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>放电电流（A）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_112">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_113">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>放电电压（V）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_113">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_114">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>终止电压（V）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_114">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_115">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>电池容量</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_115">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_36">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(138, 0, 0);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>开始</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>设备3</string>
+    </attribute>
+    <widget class="QTabWidget" name="tabWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>601</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">alternate-background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:0.0681818 rgba(80, 118, 149, 255), stop:1 rgba(255, 255, 255, 255));
+font: 11pt &quot;黑体&quot;;
+color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>15</width>
+       <height>15</height>
+      </size>
+     </property>
+     <widget class="QWidget" name="tab_9">
+      <attribute name="title">
+       <string>充电</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_17">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>591</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox#groupBox_17{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QGraphicsView" name="F3_view_15">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>321</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_35">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>531</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="title">
+         <string>扫描信息</string>
+        </property>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>400</x>
+           <y>20</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>充电中</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget_7">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>356</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_106">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;
+color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>生产厂家</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_106"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_107">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;</string>
+            </property>
+            <property name="text">
+             <string>设备型号</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_107"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>120</y>
+          <width>71</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>设备检索</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>80</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 11pt &quot;黑体&quot;;</string>
+        </property>
+        <property name="text">
+         <string>设备编号</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_5">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>80</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_8">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>190</y>
+          <width>181</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_86">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+
+</string>
+           </property>
+           <property name="text">
+            <string>充电电流（A）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_86">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_87">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>充电电压（V）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_87">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_88">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>充电电量（mAh）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_88">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_89">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>充电时长（min）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_89">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_10">
+      <attribute name="title">
+       <string>放电</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_21">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>591</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox#groupBox_21{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QGroupBox" name="groupBox_36">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>531</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="title">
+         <string>扫描信息</string>
+        </property>
+        <widget class="QLabel" name="label_12">
+         <property name="geometry">
+          <rect>
+           <x>410</x>
+           <y>20</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>充电中</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget_9">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>356</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QLabel" name="label_116">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;
+color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>生产厂家</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_116"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_117">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;</string>
+            </property>
+            <property name="text">
+             <string>设备型号</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_117"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGraphicsView" name="F3_view_16">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>321</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_6">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>80</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>80</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 11pt &quot;黑体&quot;;</string>
+        </property>
+        <property name="text">
+         <string>设备编号</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>120</y>
+          <width>71</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>设备检索</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_10">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>170</y>
+          <width>181</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_118">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>放电电流（A）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_118">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_119">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>放电电压（V）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_119">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_120">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>终止电压（V）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_120">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_121">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>电池容量</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_121">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_37">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(138, 0, 0);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>开始</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>设备4</string>
+    </attribute>
+    <widget class="QTabWidget" name="tabWidget_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>601</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">alternate-background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:0.0681818 rgba(80, 118, 149, 255), stop:1 rgba(255, 255, 255, 255));
+font: 11pt &quot;黑体&quot;;
+color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>15</width>
+       <height>15</height>
+      </size>
+     </property>
+     <widget class="QWidget" name="tab_11">
+      <attribute name="title">
+       <string>充电</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_18">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>591</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox#groupBox_18{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QGraphicsView" name="F3_view_17">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>321</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_37">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>531</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="title">
+         <string>扫描信息</string>
+        </property>
+        <widget class="QLabel" name="label_14">
+         <property name="geometry">
+          <rect>
+           <x>400</x>
+           <y>20</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>充电中</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget_11">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>356</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_122">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;
+color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>生产厂家</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_122"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_123">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;</string>
+            </property>
+            <property name="text">
+             <string>设备型号</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_123"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="pushButton_7">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>120</y>
+          <width>71</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>设备检索</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>80</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 11pt &quot;黑体&quot;;</string>
+        </property>
+        <property name="text">
+         <string>设备编号</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_7">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>80</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_12">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>190</y>
+          <width>181</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QLabel" name="label_90">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+
+</string>
+           </property>
+           <property name="text">
+            <string>充电电流（A）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_90">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_91">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>充电电压（V）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_91">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_92">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>充电电量（mAh）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_92">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_93">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>充电时长（min）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_93">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_12">
+      <attribute name="title">
+       <string>放电</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_22">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>591</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox#groupBox_22{border-image: url(:/newPrefix/C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png);}</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QGroupBox" name="groupBox_38">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>531</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="title">
+         <string>扫描信息</string>
+        </property>
+        <widget class="QLabel" name="label_16">
+         <property name="geometry">
+          <rect>
+           <x>410</x>
+           <y>20</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>充电中</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget_13">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>356</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QLabel" name="label_124">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;
+color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>生产厂家</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_124"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_125">
+            <property name="styleSheet">
+             <string notr="true">font: 6pt &quot;Agency FB&quot;;
+font: 10pt &quot;Agency FB&quot;;</string>
+            </property>
+            <property name="text">
+             <string>设备型号</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_125"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGraphicsView" name="F3_view_18">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>321</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_8">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>80</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_17">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>80</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 11pt &quot;黑体&quot;;</string>
+        </property>
+        <property name="text">
+         <string>设备编号</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_8">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>120</y>
+          <width>71</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>设备检索</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_14">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>170</y>
+          <width>181</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <item>
+          <widget class="QLabel" name="label_126">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>放电电流（A）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_126">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_127">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>放电电压（V）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_127">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_128">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>终止电压（V）</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_128">
+           <property name="styleSheet">
+            <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_129">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>电池容量</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_129">
+           <property name="styleSheet">
+            <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_38">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(138, 0, 0);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>开始</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="tesi.qrc"/>
+ </resources>
+ <connections/>
+</ui>

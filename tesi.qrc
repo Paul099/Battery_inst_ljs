@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="png">
+    <file>C:/Users/asus/Desktop/59f59941f9961593211611def3af87e.jpg</file>
+  </qresource>
+  <qresource prefix="newPrefix"/>
+  <qresource prefix="newPrefix">
+    <file>C:/Users/asus/Desktop/37b4a99c8b29264bbe3ada26c0f0b2f.png</file>
+  </qresource>
+</RCC>
