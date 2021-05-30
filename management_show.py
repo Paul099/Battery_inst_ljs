@@ -77,23 +77,13 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
         # cmd=[0xaa,0x00,1,1,1,1,1,1]
         cmd[0] = 0xaa
         cmd[2] = 0x5F#43H读取负载相应的单步电压值
-        # cmd[3] = 0x0a #00 0a 两个字节，表示00 10 mv单步步进电压值（量程精度）
-        # cmd[4] = 0x00
-        # cmd[5] = int_current & 0x000000FF     #设定的电压或者读取值
-        # cmd[6] = (int_current & 0x0000FF00) >> 8
-        # cmd[7] = (int_current & 0x00FF0000) >> 16
-        # cmd[8] = (int_current & 0xFF000000) >> 24
-        # cmd[9] = 0x96#00004096设定的1000ms电压值
-        # cmd[10] = 0x40
+
 
         cmd[25] = self.add_sum(cmd)
         mylogin.ser.write(cmd)
-        time.sleep(2)
-        # sum = 0
-        # for i in range(3,8):
-        #     sum =sum +mylogin.STRGLO[i]
-        #
-        #np.int32(sum)
+        time.sleep(2)#等待串口返回数据
+
+        '''将返回的串口数据4-7字节返回'''
         vol_sum = []
         vol_sum.append(mylogin.STRGLO[3] & 0x000000FF)
         vol_sum.append((mylogin.STRGLO[4] & 0x000000FF) << 8)
