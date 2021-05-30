@@ -42,10 +42,10 @@ class Ui_Form(object):
         self.pushButtonLogin.setGeometry(QtCore.QRect(150, 300, 71, 31))
         self.pushButtonLogin.setObjectName("pushButtonLogin")
         self.pushButtonExit = QtWidgets.QPushButton(Form)
-        self.pushButtonExit.setGeometry(QtCore.QRect(320, 300, 71, 31))
+        self.pushButtonExit.setGeometry(QtCore.QRect(280, 300, 70, 30))
         self.pushButtonExit.setObjectName("pushButtonExit")
         self.returnMsg = QtWidgets.QLabel(Form)
-        self.returnMsg.setGeometry(QtCore.QRect(160, 350, 241, 31))
+        self.returnMsg.setGeometry(QtCore.QRect(130, 350, 241, 31))
         self.returnMsg.setObjectName("returnMsg")
         self.titleLabel = QtWidgets.QLabel(Form)
         self.titleLabel.setGeometry(QtCore.QRect(160, 30, 311, 20))
@@ -55,6 +55,9 @@ class Ui_Form(object):
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
+        self.closecontrolButton = QtWidgets.QPushButton(Form)
+        self.closecontrolButton.setGeometry(QtCore.QRect(400, 300, 70, 30))
+        self.closecontrolButton.setObjectName("closecontrolButton")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -68,4 +71,5 @@ class Ui_Form(object):
         self.pushButtonExit.setText(_translate("Form", "退出"))
         self.returnMsg.setText(_translate("Form", "returnMsg"))
         self.titleLabel.setText(_translate("Form", "智能可视化监控设备蓄电池检测"))
+        self.closecontrolButton.setText(_translate("Form", "断开连接"))
 import guowang_rc

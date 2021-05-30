@@ -90,10 +90,10 @@ QLabel#returnMsg{font: 15pt;color:rgb(255, 255, 255);}
   <widget class="QPushButton" name="pushButtonExit">
    <property name="geometry">
     <rect>
-     <x>320</x>
+     <x>280</x>
      <y>300</y>
-     <width>71</width>
-     <height>31</height>
+     <width>70</width>
+     <height>30</height>
     </rect>
    </property>
    <property name="text">
@@ -103,7 +103,7 @@ QLabel#returnMsg{font: 15pt;color:rgb(255, 255, 255);}
   <widget class="QLabel" name="returnMsg">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>130</x>
      <y>350</y>
      <width>241</width>
      <height>31</height>
@@ -137,6 +137,19 @@ QLabel#returnMsg{font: 15pt;color:rgb(255, 255, 255);}
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="closecontrolButton">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>300</y>
+     <width>70</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>断开连接</string>
    </property>
   </widget>
  </widget>
