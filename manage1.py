@@ -35,9 +35,11 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
         super(MyWidget,self).__init__(parent)
         self.setupUi(self)
         self.my_login = MyLogin()
+        #self.my_widget = MyWidget()
         self.inputPowerButton1.clicked.connect(self.inputPower_set_max_current)
         self.outputButton1.clicked.connect(self.outputPower_start_shiebei1)#设备一放电
         self.vol_current = 0
+        self.update_para = threading.Thread(target=self.timer_para)
 
 
         self.init()  # 初始化变量
@@ -65,8 +67,8 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
         self.draw = QPainter()  # 绘制类实例
         self.picture = QPixmap(330, 330)  # 设置图片大小
         self.end_dot_list = [[0, 0]]  # 保存绘制点位列表
-        self.x_num = 100  # X轴分成多少等份
-        self.y_num = 5  # Y轴分成多少等份
+        self.x_num = 200  # X轴分成多少等份
+        self.y_num = 10  # Y轴分成多少等份
 
         self.x_num1 = 330 / self.x_num  # 每一等份的宽度
         self.y_num1 = 330 / self.y_num  # 每一等份的高度
@@ -163,25 +165,22 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
         '''设备1放电'''
         if mylogin.ser.is_open:
             print('串口5打开！开始放电显示')
-        current = 12#暂时写死数据
-        int_current = np.int32(current * 1000)
-        #后面用服务器返回的数据来取代设定的大小
+
         cmd = [0x00, ] * 26
-        # cmd=[0xaa,0x00,1,1,1,1,1,1]
         cmd[0] = 0xaa
         cmd[2] = 0x5F#43H读取负载相应的单步电压值
-
-
         cmd[25] = self.add_sum(cmd)
         mylogin.ser.write(cmd)
         time.sleep(2)#等待串口返回数据
 
         '''定时器显示刷新'''
-        timer = QtCore.QTimer()
-        #timer.timeout.connect(lambda :MyWidget.timer_para(self))
-        timer.timeout.connect(self.timer_para)#同上面的方法都可实现定时器的定时
-        timer.start(1)
-
+        # timer = threading.Timer(1,self.timer_para)
+        # timer.start()
+        # timer = QtCore.QTimer()
+        # #timer.timeout.connect(lambda :MyWidget.timer_para(self))
+        # timer.timeout.connect(self.timer_para)#同上面的方法都可实现定时器的定时
+        # timer.start(250)
+        #print('timer',type(timer))
         '''将返回的串口数据4-7字节返回'''
         vol_sum = []
         self.vol_record = []#存储数据
@@ -207,22 +206,8 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
         self.outputVoltageEdit1.setText(str(self.vol_current))#显示电压
         self.ouputCurrentEdit1.setText(str(self.cur_current))#显示电流
         self.outputEndVoltageEdit1.setText(str(10.00))#暂时写死从数据库读取
+        self.update_para.start()
 
-
-        # '''将返回的串口数据4-7字节返回'''
-        # vol_sum = []
-        # vol_sum.append(mylogin.STRGLO[3] & 0x000000FF)
-        # vol_sum.append((mylogin.STRGLO[4] & 0x000000FF) << 8)
-        # vol_sum.append((mylogin.STRGLO[5] & 0x000000FF) << 16)
-        # vol_sum.append((mylogin.STRGLO[6] & 0x000000FF) << 24)
-        # sum_vol =0
-        #
-        #
-        #
-        # for i in vol_sum:
-        #     sum_vol=i +sum_vol
-        # self.sum_vol_record =sum_vol/1000
-        # print('self.sum_vol_record',self.sum_vol_record)
 
 
 
@@ -230,31 +215,40 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
     def timer_para(self):
         '''刷新数据'''
         '''将返回的串口数据4-7字节返回'''
-        vol_sum = []
-        self.vol_record = []#存储数据
-        vol_sum.append(mylogin.STRGLO[3] & 0x000000FF)
-        vol_sum.append((mylogin.STRGLO[4] & 0x000000FF) << 8)
-        vol_sum.append((mylogin.STRGLO[5] & 0x000000FF) << 16)
-        vol_sum.append((mylogin.STRGLO[6] & 0x000000FF) << 24)
-        self.vol_current = self.add_sum_para_show(vol_sum)/1000#显示电压值
-        print('self.vol_current',self.vol_current)
-        self.vol_record.append(self.vol_current)#存储的电压值
+        while True:
 
-        cur_sum = []
-        self.cur_record = []#存储数据
-        cur_sum.append(mylogin.STRGLO[7] & 0x000000FF)
-        cur_sum.append((mylogin.STRGLO[8] & 0x000000FF) << 8)
-        cur_sum.append((mylogin.STRGLO[9] & 0x000000FF) << 16)
-        cur_sum.append((mylogin.STRGLO[10] & 0x000000FF) << 24)
-        self.cur_current = self.add_sum_para_show(cur_sum)/1000#显示电压值
-        print('self.cur_current', self.cur_current)
-        self.vol_record.append(self.cur_current)#存储的电流值
+            time.sleep(0.25)
+            cmd = [0x00, ] * 26
+            cmd[0] = 0xaa
+            cmd[2] = 0x5F#43H读取负载相应的单步电压值
+            cmd[25] = self.add_sum(cmd)
+            mylogin.ser.write(cmd)
 
-        self.outputVoltageEdit1.setText(str(self.vol_current))  # 显示电压
-        self.outputContentEdit1.setText(str(self.cur_current))  # 显示电流
-        print('self.vol_current',self.vol_current)
-        print('self.cur_current', self.cur_current)
-        print('定时器开启')
+            vol_sum = []
+            self.vol_record = []#存储数据
+            vol_sum.append(mylogin.STRGLO[3] & 0x000000FF)
+            vol_sum.append((mylogin.STRGLO[4] & 0x000000FF) << 8)
+            vol_sum.append((mylogin.STRGLO[5] & 0x000000FF) << 16)
+            vol_sum.append((mylogin.STRGLO[6] & 0x000000FF) << 24)
+            self.vol_current = self.add_sum_para_show(vol_sum)/1000#显示电压值
+            #print('self.vol_current',self.vol_current)
+            self.vol_record.append(self.vol_current)#存储的电压值
+
+            cur_sum = []
+            self.cur_record = []#存储数据
+            cur_sum.append(mylogin.STRGLO[7] & 0x000000FF)
+            cur_sum.append((mylogin.STRGLO[8] & 0x000000FF) << 8)
+            cur_sum.append((mylogin.STRGLO[9] & 0x000000FF) << 16)
+            cur_sum.append((mylogin.STRGLO[10] & 0x000000FF) << 24)
+            self.cur_current = self.add_sum_para_show(cur_sum)/1000#显示电压值
+            #print('self.cur_current', self.cur_current)
+            self.vol_record.append(self.cur_current)#存储的电流值
+
+            self.outputVoltageEdit1.setText(str(self.vol_current))#显示电压
+            self.ouputCurrentEdit1.setText(str(self.cur_current))#显示电流
+            # print('self.vol_current',self.vol_current)
+            # print('self.cur_current', self.cur_current)
+            # print('定时器开启')
 
 
 
@@ -286,7 +280,7 @@ class MyLogin(QtWidgets.QMainWindow,Login.Ui_Form):
 
             else:
                 self.returnMsg.setText('登录成功！串口连接失败！')
-            time.sleep(1)
+            #time.sleep(1)
             self.my_widget = MyWidget()
             self.my_widget.show()
             self.my_login = MyLogin()
@@ -360,7 +354,7 @@ class Show_Thread(QThread):
     def run(self):
         while True:
             self.signal.emit() #发送信号
-            time.sleep(0.1)
+            time.sleep(1)#发射信号的时间
 
 
 

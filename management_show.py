@@ -33,6 +33,7 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
         self.setupUi(self)
         self.signal_fun()
         self.my_login= MyLogin()
+        self.graph_show()#图像显示函数
 
 
     def signal_fun(self):
@@ -103,8 +104,8 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
         vol_sum.append((mylogin.STRGLO[4] & 0x000000FF) << 8)
         vol_sum.append((mylogin.STRGLO[5] & 0x000000FF) << 16)
         vol_sum.append((mylogin.STRGLO[6] & 0x000000FF) << 24)
-        vol_current = self.add_sum_para_show(vol_sum)/1000#显示电压值
-        self.vol_record.append(vol_current)#存储的电压值
+        self.vol_current = self.add_sum_para_show(vol_sum)/1000#显示电压值
+        self.vol_record.append(self.vol_current)#存储的电压值
 
         cur_sum = []
         self.cur_record = []#存储数据
@@ -112,15 +113,49 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
         cur_sum.append((mylogin.STRGLO[8] & 0x000000FF) << 8)
         cur_sum.append((mylogin.STRGLO[9] & 0x000000FF) << 16)
         cur_sum.append((mylogin.STRGLO[10] & 0x000000FF) << 24)
-        cur_current = self.add_sum_para_show(cur_sum)/1000#显示电压值
-        self.vol_record.append(cur_current)#存储的电流值
+        self.cur_current = self.add_sum_para_show(cur_sum)/1000#显示电压值
+        self.cur_record.append(self.cur_current)#存储的电流值
 
 
-        self.outputVoltageEdit1.setText(str(vol_current))#显示电压
-        self.outputContentEdit1.setText(str(cur_current))#显示电流
+        self.outputVoltageEdit1.setText(str(self.vol_current))#显示电压
+        self.outputContentEdit1.setText(str(self.cur_current))#显示电流
 
 
 
+    def graph_show(self):
+        '''使用pyqt 的图形化界面显示'''
+        self.graph_x =[]
+        self.graph_y =[]
+        self.pw = pg.PlotWidget()
+        # 设置图表的样貌参数
+        self.pw.setTitle("电压-时间曲线",color='008080',size='12pt')
+        self.pw.setLabel("left","电压(V)")
+        self.pw.setLabel("bottom","时间(s)")
+        self.pw.showGrid(x=True, y=True)
+        self.pw.setBackground('w')
+
+        # 设置Y轴 刻度 范围
+        self.pw.setYRange(-10,10)  # 最大值
+        #self.pw.setXRange(0, 3000)
+
+        # 居中显示 PlotWidget
+        self.setCentralWidget(self.pw)
+        self.curve = self.pw.getPlotItem().plot(pen=pg.mkPen('r', width=1))
+        # x = self.glass_level_avg_record1  # x轴的值
+        # y = list(range(len(self.glass_level_avg_record1)))  # y轴的值
+        # 启动定时器，每隔1秒通知刷新一次数据
+        timer = QtCore.QTimer()
+        timer.timeout.connect(lambda :MyWidget.updateData(self))
+        #imer.timeout.connect(self.updateData)#同上面的方法都可实现定时器的定时
+        timer.start(1000)
+        self.curve.setData(self.graph_x, self.graph_y, linewidth=1)
+        self.verticalLayout_9.addWidget(self.pw)#将控件加入到父类Ui_Form的垂直分布里
+
+    def updateData(self):
+        '''
+        定时器调用,更新曲线函数
+        '''
+        self.curve.setData(self.list(range(len(self.vol_record))), self.vol_record, linewidth=1)
 
 
 
