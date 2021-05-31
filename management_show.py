@@ -31,16 +31,30 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
     def __init__(self,parent=None):
         super(MyWidget,self).__init__(parent)
         self.setupUi(self)
-        self.inputPowerButton1.clicked.connect(self.inputPower_set_max_current)
-        self.outputButton1.clicked.connect(self.outputPower_start_shiebei1)#设备一放电
+        self.signal_fun()
         self.my_login= MyLogin()
 
-    def add_sum(self,a):
+
+    def signal_fun(self):
+        self.inputPowerButton1.clicked.connect(self.inputPower_set_max_current)
+        self.outputButton1.clicked.connect(self.outputPower_start_shiebei1)#设备一放电
+
+
+    def add_sum_check_bit(self,a):
+        '''计算校验位和'''
         sum = 0
         for i in a:
             sum = sum + i
         sum =  sum & 0x000000FF
         return sum
+
+    def add_sum_para_show(self,para):
+        '''计算四个字节的参数和'''
+        sum = 0
+        for i in para:
+            sum = sum + i
+        return sum
+
 
 
     def inputPower_set_max_current(self,):
@@ -57,7 +71,7 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
         cmd[5] = (int_current & 0x00FF0000) >> 16
         cmd[6] = (int_current & 0xFF000000) >> 24
 
-        cmd[25] = self.add_sum(cmd)
+        cmd[25] = self.add_sum_check_bit(cmd)
         print('inputPower_set_current:cmd[25]',cmd[25])
         # self.ser = serial.Serial("COM5", 9600, timeout=5)
         # self.ser.write(cmd)
@@ -70,32 +84,44 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
         '''设备1放电'''
         if mylogin.ser.is_open:
             print('串口5打开！')
-        current = 12#暂时写死数据
-        int_current = np.int32(current * 1000)
+        # current = 12#暂时写死数据
+        # int_current = np.int32(current * 1000)
         #后面用服务器返回的数据来取代设定的大小
         cmd = [0x00, ] * 26
         # cmd=[0xaa,0x00,1,1,1,1,1,1]
         cmd[0] = 0xaa
         cmd[2] = 0x5F#43H读取负载相应的单步电压值
-
-
-        cmd[25] = self.add_sum(cmd)
+        cmd[25] = self.add_sum_check_bit(cmd)
         mylogin.ser.write(cmd)
         time.sleep(2)#等待串口返回数据
 
+
         '''将返回的串口数据4-7字节返回'''
         vol_sum = []
+        self.vol_record = []#存储数据
         vol_sum.append(mylogin.STRGLO[3] & 0x000000FF)
         vol_sum.append((mylogin.STRGLO[4] & 0x000000FF) << 8)
         vol_sum.append((mylogin.STRGLO[5] & 0x000000FF) << 16)
         vol_sum.append((mylogin.STRGLO[6] & 0x000000FF) << 24)
-        sum =0
-        for i in vol_sum:
-            sum=i +sum
+        vol_current = self.add_sum_para_show(vol_sum)/1000#显示电压值
+        self.vol_record.append(vol_current)#存储的电压值
+
+        cur_sum = []
+        self.cur_record = []#存储数据
+        cur_sum.append(mylogin.STRGLO[7] & 0x000000FF)
+        cur_sum.append((mylogin.STRGLO[8] & 0x000000FF) << 8)
+        cur_sum.append((mylogin.STRGLO[9] & 0x000000FF) << 16)
+        cur_sum.append((mylogin.STRGLO[10] & 0x000000FF) << 24)
+        cur_current = self.add_sum_para_show(cur_sum)/1000#显示电压值
+        self.vol_record.append(cur_current)#存储的电流值
 
 
-        self.outputVoltageEdit1.setText(str(sum))
-        print('sum:',sum)
+        self.outputVoltageEdit1.setText(str(vol_current))#显示电压
+        self.outputContentEdit1.setText(str(cur_current))#显示电流
+
+
+
+
 
 
 

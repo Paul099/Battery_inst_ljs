@@ -44,8 +44,7 @@ class Ui_Form(object):
         self.tabWidget_2.setGeometry(QtCore.QRect(0, 0, 601, 421))
         self.tabWidget_2.setStyleSheet("alternate-background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:0.0681818 rgba(80, 118, 149, 255), stop:1 rgba(255, 255, 255, 255));\n"
 "font: 11pt \"黑体\";\n"
-"color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);")
+"")
         self.tabWidget_2.setIconSize(QtCore.QSize(15, 15))
         self.tabWidget_2.setObjectName("tabWidget_2")
         self.tab_5 = QtWidgets.QWidget()
@@ -102,7 +101,7 @@ class Ui_Form(object):
         self.lineEdit.setGeometry(QtCore.QRect(420, 80, 113, 20))
         self.lineEdit.setObjectName("lineEdit")
         self.layoutWidget1 = QtWidgets.QWidget(self.groupBox_15)
-        self.layoutWidget1.setGeometry(QtCore.QRect(360, 170, 181, 217))
+        self.layoutWidget1.setGeometry(QtCore.QRect(360, 160, 181, 217))
         self.layoutWidget1.setObjectName("layoutWidget1")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget1)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -179,9 +178,7 @@ class Ui_Form(object):
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.label_102 = QtWidgets.QLabel(self.layoutWidget_4)
-        self.label_102.setStyleSheet("font: 6pt \"Agency FB\";\n"
-"font: 10pt \"Agency FB\";\n"
-"color: rgb(255, 255, 255);")
+        self.label_102.setStyleSheet("color: rgb(0, 0, 0);")
         self.label_102.setObjectName("label_102")
         self.horizontalLayout_4.addWidget(self.label_102)
         self.lineEdit_102 = QtWidgets.QLineEdit(self.layoutWidget_4)
@@ -195,10 +192,6 @@ class Ui_Form(object):
         self.lineEdit_103 = QtWidgets.QLineEdit(self.layoutWidget_4)
         self.lineEdit_103.setObjectName("lineEdit_103")
         self.horizontalLayout_4.addWidget(self.lineEdit_103)
-        self.F3_view_13 = QtWidgets.QGraphicsView(self.groupBox_19)
-        self.F3_view_13.setGeometry(QtCore.QRect(10, 60, 321, 311))
-        self.F3_view_13.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.F3_view_13.setObjectName("F3_view_13")
         self.lineEdit_3 = QtWidgets.QLineEdit(self.groupBox_19)
         self.lineEdit_3.setGeometry(QtCore.QRect(420, 80, 113, 20))
         self.lineEdit_3.setObjectName("lineEdit_3")
@@ -221,10 +214,7 @@ class Ui_Form(object):
         self.label_109.setObjectName("label_109")
         self.verticalLayout_3.addWidget(self.label_109)
         self.ouputCurrentEdit1 = QtWidgets.QLineEdit(self.layoutWidget2)
-        self.ouputCurrentEdit1.setStyleSheet("\n"
-"\n"
-"color: rgb(255, 255, 255);\n"
-"border-color: rgb(255, 255, 255);")
+        self.ouputCurrentEdit1.setStyleSheet("")
         self.ouputCurrentEdit1.setObjectName("ouputCurrentEdit1")
         self.verticalLayout_3.addWidget(self.ouputCurrentEdit1)
         self.label_108 = QtWidgets.QLabel(self.layoutWidget2)
@@ -232,9 +222,7 @@ class Ui_Form(object):
         self.label_108.setObjectName("label_108")
         self.verticalLayout_3.addWidget(self.label_108)
         self.outputVoltageEdit1 = QtWidgets.QLineEdit(self.layoutWidget2)
-        self.outputVoltageEdit1.setStyleSheet("\n"
-"color: rgb(255, 255, 255);\n"
-"border-color: rgb(255, 255, 255);")
+        self.outputVoltageEdit1.setStyleSheet("")
         self.outputVoltageEdit1.setObjectName("outputVoltageEdit1")
         self.verticalLayout_3.addWidget(self.outputVoltageEdit1)
         self.label_111 = QtWidgets.QLabel(self.layoutWidget2)
@@ -242,9 +230,7 @@ class Ui_Form(object):
         self.label_111.setObjectName("label_111")
         self.verticalLayout_3.addWidget(self.label_111)
         self.outputEndVoltageEdit1 = QtWidgets.QLineEdit(self.layoutWidget2)
-        self.outputEndVoltageEdit1.setStyleSheet("\n"
-"color: rgb(255, 255, 255);\n"
-"border-color: rgb(255, 255, 255);")
+        self.outputEndVoltageEdit1.setStyleSheet("")
         self.outputEndVoltageEdit1.setObjectName("outputEndVoltageEdit1")
         self.verticalLayout_3.addWidget(self.outputEndVoltageEdit1)
         self.label_110 = QtWidgets.QLabel(self.layoutWidget2)
@@ -252,10 +238,7 @@ class Ui_Form(object):
         self.label_110.setObjectName("label_110")
         self.verticalLayout_3.addWidget(self.label_110)
         self.outputContentEdit1 = QtWidgets.QLineEdit(self.layoutWidget2)
-        self.outputContentEdit1.setStyleSheet("\n"
-"\n"
-"color: rgb(255, 255, 255);\n"
-"border-color: rgb(255, 255, 255);")
+        self.outputContentEdit1.setStyleSheet("")
         self.outputContentEdit1.setObjectName("outputContentEdit1")
         self.verticalLayout_3.addWidget(self.outputContentEdit1)
         self.outputButton1 = QtWidgets.QPushButton(self.layoutWidget2)
@@ -263,6 +246,16 @@ class Ui_Form(object):
 "color: rgb(255, 255, 255);")
         self.outputButton1.setObjectName("outputButton1")
         self.verticalLayout_3.addWidget(self.outputButton1)
+        self.verticalLayoutWidget = QtWidgets.QWidget(self.groupBox_19)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(10, 60, 341, 311))
+        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
+        self.verticalLayout_out1 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout_out1.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_out1.setObjectName("verticalLayout_out1")
+        self.show_curve = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.show_curve.setAlignment(QtCore.Qt.AlignCenter)
+        self.show_curve.setObjectName("show_curve")
+        self.verticalLayout_out1.addWidget(self.show_curve)
         self.tabWidget_2.addTab(self.tab_6, "")
         self.tabWidget.addTab(self.tab_2, "")
         self.tab = QtWidgets.QWidget()
@@ -341,9 +334,7 @@ class Ui_Form(object):
         self.label_82.setObjectName("label_82")
         self.verticalLayout_2.addWidget(self.label_82)
         self.lineEdit_82 = QtWidgets.QLineEdit(self.layoutWidget_2)
-        self.lineEdit_82.setStyleSheet("\n"
-"color: rgb(255, 255, 255);\n"
-"border-color: rgb(255, 255, 255);")
+        self.lineEdit_82.setStyleSheet("")
         self.lineEdit_82.setObjectName("lineEdit_82")
         self.verticalLayout_2.addWidget(self.lineEdit_82)
         self.label_83 = QtWidgets.QLabel(self.layoutWidget_2)
@@ -351,9 +342,7 @@ class Ui_Form(object):
         self.label_83.setObjectName("label_83")
         self.verticalLayout_2.addWidget(self.label_83)
         self.lineEdit_83 = QtWidgets.QLineEdit(self.layoutWidget_2)
-        self.lineEdit_83.setStyleSheet("\n"
-"color: rgb(255, 255, 255);\n"
-"border-color: rgb(255, 255, 255);")
+        self.lineEdit_83.setStyleSheet("")
         self.lineEdit_83.setObjectName("lineEdit_83")
         self.verticalLayout_2.addWidget(self.lineEdit_83)
         self.label_84 = QtWidgets.QLabel(self.layoutWidget_2)
@@ -361,10 +350,7 @@ class Ui_Form(object):
         self.label_84.setObjectName("label_84")
         self.verticalLayout_2.addWidget(self.label_84)
         self.lineEdit_84 = QtWidgets.QLineEdit(self.layoutWidget_2)
-        self.lineEdit_84.setStyleSheet("\n"
-"\n"
-"color: rgb(255, 255, 255);\n"
-"border-color: rgb(255, 255, 255);")
+        self.lineEdit_84.setStyleSheet("")
         self.lineEdit_84.setObjectName("lineEdit_84")
         self.verticalLayout_2.addWidget(self.lineEdit_84)
         self.label_85 = QtWidgets.QLabel(self.layoutWidget_2)
@@ -372,10 +358,7 @@ class Ui_Form(object):
         self.label_85.setObjectName("label_85")
         self.verticalLayout_2.addWidget(self.label_85)
         self.lineEdit_85 = QtWidgets.QLineEdit(self.layoutWidget_2)
-        self.lineEdit_85.setStyleSheet("\n"
-"\n"
-"color: rgb(255, 255, 255);\n"
-"border-color: rgb(255, 255, 255);")
+        self.lineEdit_85.setStyleSheet("")
         self.lineEdit_85.setObjectName("lineEdit_85")
         self.verticalLayout_2.addWidget(self.lineEdit_85)
         self.tabWidget_3.addTab(self.tab_7, "")
@@ -454,9 +437,7 @@ class Ui_Form(object):
         self.label_113.setObjectName("label_113")
         self.verticalLayout_4.addWidget(self.label_113)
         self.lineEdit_113 = QtWidgets.QLineEdit(self.layoutWidget_6)
-        self.lineEdit_113.setStyleSheet("\n"
-"color: rgb(255, 255, 255);\n"
-"border-color: rgb(255, 255, 255);")
+        self.lineEdit_113.setStyleSheet("")
         self.lineEdit_113.setObjectName("lineEdit_113")
         self.verticalLayout_4.addWidget(self.lineEdit_113)
         self.label_114 = QtWidgets.QLabel(self.layoutWidget_6)
@@ -464,9 +445,7 @@ class Ui_Form(object):
         self.label_114.setObjectName("label_114")
         self.verticalLayout_4.addWidget(self.label_114)
         self.lineEdit_114 = QtWidgets.QLineEdit(self.layoutWidget_6)
-        self.lineEdit_114.setStyleSheet("\n"
-"color: rgb(255, 255, 255);\n"
-"border-color: rgb(255, 255, 255);")
+        self.lineEdit_114.setStyleSheet("")
         self.lineEdit_114.setObjectName("lineEdit_114")
         self.verticalLayout_4.addWidget(self.lineEdit_114)
         self.label_115 = QtWidgets.QLabel(self.layoutWidget_6)
@@ -474,10 +453,7 @@ class Ui_Form(object):
         self.label_115.setObjectName("label_115")
         self.verticalLayout_4.addWidget(self.label_115)
         self.lineEdit_115 = QtWidgets.QLineEdit(self.layoutWidget_6)
-        self.lineEdit_115.setStyleSheet("\n"
-"\n"
-"color: rgb(255, 255, 255);\n"
-"border-color: rgb(255, 255, 255);")
+        self.lineEdit_115.setStyleSheet("")
         self.lineEdit_115.setObjectName("lineEdit_115")
         self.verticalLayout_4.addWidget(self.lineEdit_115)
         self.pushButton_36 = QtWidgets.QPushButton(self.layoutWidget_6)
@@ -966,6 +942,7 @@ class Ui_Form(object):
         self.label_111.setText(_translate("Form", "终止电压（V）"))
         self.label_110.setText(_translate("Form", "电池容量"))
         self.outputButton1.setText(_translate("Form", "开始"))
+        self.show_curve.setText(_translate("Form", "曲线区"))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_6), _translate("Form", "放电"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Form", "设备1"))
         self.groupBox_32.setTitle(_translate("Form", "扫描信息"))
