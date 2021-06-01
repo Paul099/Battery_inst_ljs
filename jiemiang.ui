@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>595</width>
-    <height>517</height>
+    <width>1280</width>
+    <height>1024</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,10 +35,10 @@ QTabWidget:pane {
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>70</y>
-     <width>591</width>
-     <height>441</height>
+     <x>10</x>
+     <y>140</y>
+     <width>1231</width>
+     <height>821</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -56,10 +56,10 @@ font: 14pt &quot;黑体&quot;;
     <widget class="QTabWidget" name="tabWidget_2">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>601</width>
-       <height>421</height>
+       <x>20</x>
+       <y>20</y>
+       <width>1221</width>
+       <height>781</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -68,7 +68,7 @@ font: 11pt &quot;黑体&quot;;
 </string>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <property name="iconSize">
       <size>
@@ -85,8 +85,8 @@ font: 11pt &quot;黑体&quot;;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>591</width>
-         <height>381</height>
+         <width>1181</width>
+         <height>731</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -98,8 +98,8 @@ font: 11pt &quot;黑体&quot;;
        <widget class="QGroupBox" name="groupBox_31">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>0</y>
+          <x>30</x>
+          <y>20</y>
           <width>531</width>
           <height>51</height>
          </rect>
@@ -123,7 +123,7 @@ font: 11pt &quot;黑体&quot;;
           <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
          <property name="text">
-          <string>充电中</string>
+          <string>放电中</string>
          </property>
         </widget>
         <widget class="QWidget" name="layoutWidget">
@@ -171,8 +171,8 @@ font: 10pt &quot;Agency FB&quot;;</string>
        <widget class="QPushButton" name="pushButton">
         <property name="geometry">
          <rect>
-          <x>420</x>
-          <y>120</y>
+          <x>90</x>
+          <y>140</y>
           <width>71</width>
           <height>21</height>
          </rect>
@@ -184,8 +184,8 @@ font: 10pt &quot;Agency FB&quot;;</string>
        <widget class="QLabel" name="label_2">
         <property name="geometry">
          <rect>
-          <x>360</x>
-          <y>80</y>
+          <x>30</x>
+          <y>100</y>
           <width>51</width>
           <height>16</height>
          </rect>
@@ -201,126 +201,181 @@ font: 11pt &quot;黑体&quot;;</string>
        <widget class="QLineEdit" name="lineEdit">
         <property name="geometry">
          <rect>
-          <x>420</x>
-          <y>80</y>
+          <x>90</x>
+          <y>100</y>
           <width>113</width>
           <height>20</height>
          </rect>
         </property>
        </widget>
-       <widget class="QWidget" name="layoutWidget">
-        <property name="geometry">
-         <rect>
-          <x>360</x>
-          <y>160</y>
-          <width>181</width>
-          <height>217</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout">
-         <item>
-          <widget class="QLabel" name="label_79">
-           <property name="styleSheet">
-            <string notr="true">color: rgb(255, 255, 255);
-
-</string>
-           </property>
-           <property name="text">
-            <string>充电电流（A）</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="inputCurrentEdit1">
-           <property name="styleSheet">
-            <string notr="true">
-color: rgb(255, 255, 255);
-border-color: rgb(255, 255, 255);</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_78">
-           <property name="styleSheet">
-            <string notr="true">color: rgb(255, 255, 255);</string>
-           </property>
-           <property name="text">
-            <string>充电电压（V）</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="inputVoltageEdit1">
-           <property name="styleSheet">
-            <string notr="true">
-color: rgb(255, 255, 255);
-border-color: rgb(255, 255, 255);</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_81">
-           <property name="styleSheet">
-            <string notr="true">color: rgb(255, 255, 255);</string>
-           </property>
-           <property name="text">
-            <string>充电电量（mAh）</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="inputContentEdit1">
-           <property name="styleSheet">
-            <string notr="true">
-
-color: rgb(255, 255, 255);
-border-color: rgb(255, 255, 255);</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_80">
-           <property name="styleSheet">
-            <string notr="true">color: rgb(255, 255, 255);</string>
-           </property>
-           <property name="text">
-            <string>充电时长（min）</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="inputTimeEdit1">
-           <property name="styleSheet">
-            <string notr="true">
-
-color: rgb(255, 255, 255);
-border-color: rgb(255, 255, 255);</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="inputPowerButton1">
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(138, 0, 0);
-color: rgb(255, 255, 255);</string>
-           </property>
-           <property name="text">
-            <string>开始充电</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
        <widget class="QWidget" name="verticalLayoutWidget_2">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>50</y>
-          <width>341</width>
-          <height>321</height>
+          <x>20</x>
+          <y>220</y>
+          <width>1141</width>
+          <height>471</height>
          </rect>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_9"/>
+        <layout class="QVBoxLayout" name="verticalLayout_inputplot"/>
+       </widget>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>20</y>
+          <width>581</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>GroupBox</string>
+        </property>
+        <widget class="QLineEdit" name="inputCurrentEdit1">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>65</y>
+           <width>167</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_79">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>40</y>
+           <width>104</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+
+</string>
+         </property>
+         <property name="text">
+          <string>充电电流（A）</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_78">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>40</y>
+           <width>104</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>充电电压（V）</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="inputVoltageEdit1">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>64</y>
+           <width>167</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_81">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>105</y>
+           <width>120</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>充电电量（mAh）</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="inputContentEdit1">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>130</y>
+           <width>167</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="inputTimeEdit1">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>130</y>
+           <width>167</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+
+color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_80">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>106</y>
+           <width>120</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>充电时长（min）</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="inputPowerButton1">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>90</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(138, 0, 0);
+color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>开始充电</string>
+         </property>
+        </widget>
        </widget>
       </widget>
      </widget>
@@ -475,7 +530,7 @@ font: 11pt &quot;黑体&quot;;</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="ouputCurrentEdit1">
+          <widget class="QLineEdit" name="outputCurrentEdit1">
            <property name="styleSheet">
             <string notr="true"/>
            </property>

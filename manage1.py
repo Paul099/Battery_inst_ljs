@@ -204,7 +204,7 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
 
 
         self.outputVoltageEdit1.setText(str(self.vol_current))#显示电压
-        self.ouputCurrentEdit1.setText(str(self.cur_current))#显示电流
+        self.outputCurrentEdit1.setText(str(self.cur_current))#显示电流
         self.outputEndVoltageEdit1.setText(str(10.00))#暂时写死从数据库读取
         self.update_para.start()
 
@@ -245,7 +245,7 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
             self.vol_record.append(self.cur_current)#存储的电流值
 
             self.outputVoltageEdit1.setText(str(self.vol_current))#显示电压
-            self.ouputCurrentEdit1.setText(str(self.cur_current))#显示电流
+            self.outputCurrentEdit1.setText(str(self.cur_current))#显示电流
             # print('self.vol_current',self.vol_current)
             # print('self.cur_current', self.cur_current)
             # print('定时器开启')

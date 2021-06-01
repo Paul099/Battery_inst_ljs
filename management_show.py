@@ -35,10 +35,18 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
         self.my_login= MyLogin()
         self.graph_show()#图像显示函数
 
+        self.vol_record1 = [0]
+        self.cur_record1 = [0]
+
+        '''添加线程和time.sleep()作为定时器'''
+        self.update_para = threading.Thread(target=self.outputPower_start_shiebei1)
+        self.graph_plot = threading.Thread(target=self.updatedata_plot)#画图线程
+
 
     def signal_fun(self):
         self.inputPowerButton1.clicked.connect(self.inputPower_set_max_current)
-        self.outputButton1.clicked.connect(self.outputPower_start_shiebei1)#设备一放电
+        #self.outputButton1.clicked.connect(self.outputPower_start_shiebei1)#设备一放电但是定时器无法显示
+        self.outputButton1.clicked.connect(self.output1_slot)
 
 
     def add_sum_check_bit(self,a):
@@ -84,41 +92,45 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
     def outputPower_start_shiebei1(self):
         '''设备1放电'''
         if mylogin.ser.is_open:
-            print('串口5打开！')
-        # current = 12#暂时写死数据
-        # int_current = np.int32(current * 1000)
-        #后面用服务器返回的数据来取代设定的大小
-        cmd = [0x00, ] * 26
-        # cmd=[0xaa,0x00,1,1,1,1,1,1]
-        cmd[0] = 0xaa
-        cmd[2] = 0x5F#43H读取负载相应的单步电压值
-        cmd[25] = self.add_sum_check_bit(cmd)
-        mylogin.ser.write(cmd)
-        time.sleep(2)#等待串口返回数据
+            print('串口5打开！开始放电显示')
+        while True:
+            time.sleep(0.25)
+            #后面用服务器返回的数据来取代设定的大小
+            cmd = [0x00, ] * 26
+            # cmd=[0xaa,0x00,1,1,1,1,1,1]
+            cmd[0] = 0xaa
+            cmd[2] = 0x5F#5F读取相应的实时电压值
+            cmd[25] = self.add_sum_check_bit(cmd)
+            mylogin.ser.write(cmd)
+            time.sleep(2)#等待串口返回数据
+
+            #if mylogin.ser.in_waiting:#有返回数据
+            '''将返回的串口数据4-7字节返回'''
+
+            vol_sum = []
+            #self.vol_record1 = [0,]#存储数据
+            vol_sum.append(mylogin.STRGLO[3] & 0x000000FF)
+            vol_sum.append((mylogin.STRGLO[4] & 0x000000FF) << 8)
+            vol_sum.append((mylogin.STRGLO[5] & 0x000000FF) << 16)
+            vol_sum.append((mylogin.STRGLO[6] & 0x000000FF) << 24)
+            self.vol_current = self.add_sum_para_show(vol_sum)/1000#显示电压值
+            self.vol_record1.append(self.vol_current)#存储的电压值
+            print('self.vol_current',self.vol_current)
+
+            cur_sum = []
+            #self.cur_record1 = [0,]#存储数据
+            cur_sum.append(mylogin.STRGLO[7] & 0x000000FF)
+            cur_sum.append((mylogin.STRGLO[8] & 0x000000FF) << 8)
+            cur_sum.append((mylogin.STRGLO[9] & 0x000000FF) << 16)
+            cur_sum.append((mylogin.STRGLO[10] & 0x000000FF) << 24)
+            self.cur_current = self.add_sum_para_show(cur_sum)/1000#显示电压值
+            self.cur_record1.append(self.cur_current)#存储的电流值
+            print('self.cur_current',self.cur_current)
 
 
-        '''将返回的串口数据4-7字节返回'''
-        vol_sum = []
-        self.vol_record = []#存储数据
-        vol_sum.append(mylogin.STRGLO[3] & 0x000000FF)
-        vol_sum.append((mylogin.STRGLO[4] & 0x000000FF) << 8)
-        vol_sum.append((mylogin.STRGLO[5] & 0x000000FF) << 16)
-        vol_sum.append((mylogin.STRGLO[6] & 0x000000FF) << 24)
-        self.vol_current = self.add_sum_para_show(vol_sum)/1000#显示电压值
-        self.vol_record.append(self.vol_current)#存储的电压值
-
-        cur_sum = []
-        self.cur_record = []#存储数据
-        cur_sum.append(mylogin.STRGLO[7] & 0x000000FF)
-        cur_sum.append((mylogin.STRGLO[8] & 0x000000FF) << 8)
-        cur_sum.append((mylogin.STRGLO[9] & 0x000000FF) << 16)
-        cur_sum.append((mylogin.STRGLO[10] & 0x000000FF) << 24)
-        self.cur_current = self.add_sum_para_show(cur_sum)/1000#显示电压值
-        self.cur_record.append(self.cur_current)#存储的电流值
-
-
-        self.outputVoltageEdit1.setText(str(self.vol_current))#显示电压
-        self.outputContentEdit1.setText(str(self.cur_current))#显示电流
+            self.outputVoltageEdit1.setText(str(self.vol_current))#显示电压
+            self.outputCurrentEdit1.setText(str(self.cur_current))#显示电流
+            self.outputEndVoltageEdit1.setText(str(10.00))  # 暂时写死从数据库读取
 
 
 
@@ -145,20 +157,31 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
         # y = list(range(len(self.glass_level_avg_record1)))  # y轴的值
         # 启动定时器，每隔1秒通知刷新一次数据
         timer = QtCore.QTimer()
-        timer.timeout.connect(lambda :MyWidget.updateData(self))
-        #imer.timeout.connect(self.updateData)#同上面的方法都可实现定时器的定时
+        #timer.timeout.connect(lambda :MyWidget.updateData(self))
+        timer.timeout.connect(self.updatedata_plot)#同上面的方法都可实现定时器的定时
         timer.start(1000)
-        self.curve.setData(self.graph_x, self.graph_y, linewidth=1)
-        self.verticalLayout_9.addWidget(self.pw)#将控件加入到父类Ui_Form的垂直分布里
 
-    def updateData(self):
+        self.curve.setData(self.graph_x, self.graph_y, linewidth=1)
+        self.verticalLayout_inputplot.addWidget(self.pw)#将控件加入到父类Ui_Form的垂直分布里
+
+    def updatedata_plot(self):
         '''
         定时器调用,更新曲线函数
         '''
-        self.curve.setData(self.list(range(len(self.vol_record))), self.vol_record, linewidth=1)
+        print('放电电压显示输出定时器启动！')
+        while True:
+            print('self.vol_record',self.vol_record1)
+            self.curve.setData(list(range(len(self.vol_record1))), self.vol_record1, linewidth=1)
+            time.sleep(0.25)
 
 
-
+    def output1_slot(self):
+        '''开始放电的设备按钮'''
+        try:
+            self.update_para.start()
+            self.graph_plot.start()
+        except:
+            print('''开始放电的设备按钮''')
 
 
 
