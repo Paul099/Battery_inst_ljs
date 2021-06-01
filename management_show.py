@@ -145,7 +145,7 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
                 cur_sum.append((mylogin.STRGLO[8] & 0x000000FF) << 8)
                 cur_sum.append((mylogin.STRGLO[9] & 0x000000FF) << 16)
                 cur_sum.append((mylogin.STRGLO[10] & 0x000000FF) << 24)
-                self.cur_current = self.add_sum_para_show(cur_sum)/1000#显示电压值
+                self.cur_current = self.add_sum_para_show(cur_sum)/10000#显示电流值
                 self.cur_record1.append(self.cur_current)#存储的电流值
                 #print('self.cur_current',self.cur_current)
                 # self.current_time1.append(time.time())
@@ -154,7 +154,7 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
                 self.current_time = time.time()#获取当前电流采集的时间
                 output_content1 = (last_cur_current +  self.cur_current)/2
                 output_content_duration = self.current_time-last_current_time
-                output_content_sum =(output_content1*output_content_duration + output_content_sum)*1000/3600#考虑到折线图，采用的梯形面积计算
+                output_content_sum =(output_content1*output_content_duration + output_content_sum)*10000/3600#考虑到折线图，采用的梯形面积计算
 
                 print("output_content1:%s,output_content_duration:%s,output_content_sum:%f"%(output_content1,output_content_duration,output_content_sum))
                 self.outputVoltageEdit1.setText(str(self.vol_current))#显示电压

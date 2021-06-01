@@ -198,7 +198,7 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
         cur_sum.append((mylogin.STRGLO[8] & 0x000000FF) << 8)
         cur_sum.append((mylogin.STRGLO[9] & 0x000000FF) << 16)
         cur_sum.append((mylogin.STRGLO[10] & 0x000000FF) << 24)
-        self.cur_current = self.add_sum_para_show(cur_sum)/1000#显示电压值
+        self.cur_current = self.add_sum_para_show(cur_sum)/10000#显示电压值单位是0.1mv
         print('self.cur_current', self.cur_current)
         self.vol_record.append(self.cur_current)#存储的电流值
 
