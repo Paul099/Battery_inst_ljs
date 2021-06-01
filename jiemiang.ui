@@ -377,6 +377,16 @@ color: rgb(255, 255, 255);</string>
          </property>
         </widget>
        </widget>
+       <widget class="QTextEdit" name="textEdit1">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>120</y>
+          <width>131</width>
+          <height>71</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
      </widget>
      <widget class="QWidget" name="tab_6">
@@ -413,7 +423,7 @@ color: rgb(255, 255, 255);</string>
         <property name="title">
          <string>扫描信息</string>
         </property>
-        <widget class="QLabel" name="label_5">
+        <widget class="QLabel" name="outputStateLabel1">
          <property name="geometry">
           <rect>
            <x>400</x>
@@ -576,7 +586,7 @@ font: 11pt &quot;黑体&quot;;</string>
             <string notr="true">color: rgb(255, 255, 255);</string>
            </property>
            <property name="text">
-            <string>电池容量</string>
+            <string>电池容量(mAh)</string>
            </property>
           </widget>
          </item>
