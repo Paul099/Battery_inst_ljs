@@ -110,6 +110,7 @@ class Ui_Form(object):
         self.inputCurrentEdit1.setStyleSheet("\n"
 "color: rgb(255, 255, 255);\n"
 "border-color: rgb(255, 255, 255);")
+        self.inputCurrentEdit1.setReadOnly(True)
         self.inputCurrentEdit1.setObjectName("inputCurrentEdit1")
         self.label_79 = QtWidgets.QLabel(self.groupBox)
         self.label_79.setGeometry(QtCore.QRect(30, 40, 104, 16))
@@ -126,6 +127,7 @@ class Ui_Form(object):
         self.inputVoltageEdit1.setStyleSheet("\n"
 "color: rgb(255, 255, 255);\n"
 "border-color: rgb(255, 255, 255);")
+        self.inputVoltageEdit1.setReadOnly(True)
         self.inputVoltageEdit1.setObjectName("inputVoltageEdit1")
         self.label_81 = QtWidgets.QLabel(self.groupBox)
         self.label_81.setGeometry(QtCore.QRect(30, 105, 120, 16))
@@ -137,6 +139,7 @@ class Ui_Form(object):
 "\n"
 "color: rgb(255, 255, 255);\n"
 "border-color: rgb(255, 255, 255);")
+        self.inputContentEdit1.setReadOnly(True)
         self.inputContentEdit1.setObjectName("inputContentEdit1")
         self.inputTimeEdit1 = QtWidgets.QLineEdit(self.groupBox)
         self.inputTimeEdit1.setGeometry(QtCore.QRect(240, 130, 167, 21))
@@ -144,6 +147,7 @@ class Ui_Form(object):
 "\n"
 "color: rgb(255, 255, 255);\n"
 "border-color: rgb(255, 255, 255);")
+        self.inputTimeEdit1.setReadOnly(True)
         self.inputTimeEdit1.setObjectName("inputTimeEdit1")
         self.label_80 = QtWidgets.QLabel(self.groupBox)
         self.label_80.setGeometry(QtCore.QRect(240, 106, 120, 16))
@@ -217,6 +221,8 @@ class Ui_Form(object):
         self.verticalLayout_3.addWidget(self.label_109)
         self.outputCurrentEdit1 = QtWidgets.QLineEdit(self.layoutWidget1)
         self.outputCurrentEdit1.setStyleSheet("")
+        self.outputCurrentEdit1.setText("")
+        self.outputCurrentEdit1.setReadOnly(True)
         self.outputCurrentEdit1.setObjectName("outputCurrentEdit1")
         self.verticalLayout_3.addWidget(self.outputCurrentEdit1)
         self.label_108 = QtWidgets.QLabel(self.layoutWidget1)
@@ -225,6 +231,7 @@ class Ui_Form(object):
         self.verticalLayout_3.addWidget(self.label_108)
         self.outputVoltageEdit1 = QtWidgets.QLineEdit(self.layoutWidget1)
         self.outputVoltageEdit1.setStyleSheet("")
+        self.outputVoltageEdit1.setReadOnly(True)
         self.outputVoltageEdit1.setObjectName("outputVoltageEdit1")
         self.verticalLayout_3.addWidget(self.outputVoltageEdit1)
         self.label_111 = QtWidgets.QLabel(self.layoutWidget1)
@@ -233,6 +240,7 @@ class Ui_Form(object):
         self.verticalLayout_3.addWidget(self.label_111)
         self.outputEndVoltageEdit1 = QtWidgets.QLineEdit(self.layoutWidget1)
         self.outputEndVoltageEdit1.setStyleSheet("")
+        self.outputEndVoltageEdit1.setReadOnly(True)
         self.outputEndVoltageEdit1.setObjectName("outputEndVoltageEdit1")
         self.verticalLayout_3.addWidget(self.outputEndVoltageEdit1)
         self.label_110 = QtWidgets.QLabel(self.layoutWidget1)
@@ -241,6 +249,7 @@ class Ui_Form(object):
         self.verticalLayout_3.addWidget(self.label_110)
         self.outputContentEdit1 = QtWidgets.QLineEdit(self.layoutWidget1)
         self.outputContentEdit1.setStyleSheet("")
+        self.outputContentEdit1.setReadOnly(True)
         self.outputContentEdit1.setObjectName("outputContentEdit1")
         self.verticalLayout_3.addWidget(self.outputContentEdit1)
         self.outputButton1 = QtWidgets.QPushButton(self.layoutWidget1)
@@ -944,7 +953,7 @@ class Ui_Form(object):
         self.label_108.setText(_translate("Form", "放电电压（V）"))
         self.label_111.setText(_translate("Form", "终止电压（V）"))
         self.label_110.setText(_translate("Form", "电池容量(mAh)"))
-        self.outputButton1.setText(_translate("Form", "开始"))
+        self.outputButton1.setText(_translate("Form", "开始放电"))
         self.show_curve.setText(_translate("Form", "曲线区"))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_6), _translate("Form", "放电"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Form", "设备1"))

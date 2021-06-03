@@ -245,6 +245,9 @@ font: 11pt &quot;黑体&quot;;</string>
 color: rgb(255, 255, 255);
 border-color: rgb(255, 255, 255);</string>
          </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
         </widget>
         <widget class="QLabel" name="label_79">
          <property name="geometry">
@@ -294,6 +297,9 @@ border-color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);
 border-color: rgb(255, 255, 255);</string>
          </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
         </widget>
         <widget class="QLabel" name="label_81">
          <property name="geometry">
@@ -326,6 +332,9 @@ border-color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);
 border-color: rgb(255, 255, 255);</string>
          </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
         </widget>
         <widget class="QLineEdit" name="inputTimeEdit1">
          <property name="geometry">
@@ -341,6 +350,9 @@ border-color: rgb(255, 255, 255);</string>
 
 color: rgb(255, 255, 255);
 border-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
          </property>
         </widget>
         <widget class="QLabel" name="label_80">
@@ -544,6 +556,12 @@ font: 11pt &quot;黑体&quot;;</string>
            <property name="styleSheet">
             <string notr="true"/>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item>
@@ -560,6 +578,9 @@ font: 11pt &quot;黑体&quot;;</string>
           <widget class="QLineEdit" name="outputVoltageEdit1">
            <property name="styleSheet">
             <string notr="true"/>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -578,6 +599,9 @@ font: 11pt &quot;黑体&quot;;</string>
            <property name="styleSheet">
             <string notr="true"/>
            </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item>
@@ -595,6 +619,9 @@ font: 11pt &quot;黑体&quot;;</string>
            <property name="styleSheet">
             <string notr="true"/>
            </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item>
@@ -604,7 +631,7 @@ font: 11pt &quot;黑体&quot;;</string>
 color: rgb(255, 255, 255);</string>
            </property>
            <property name="text">
-            <string>开始</string>
+            <string>开始放电</string>
            </property>
           </widget>
          </item>
