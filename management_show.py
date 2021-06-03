@@ -193,9 +193,8 @@ class MyWidget(QtWidgets.QMainWindow,jiemiang.Ui_Form):
         self.output1_plot_timer = QtCore.QTimer()
         #timer.timeout.connect(lambda :MyWidget.updateData(self))
         self.output1_plot_timer.timeout.connect(self.updatedata_plot)#同上面的方法都可实现定时器的定时
-
-
         print('''开始放电的设备按钮被按下！''')
+
         if mylogin.ser.is_open:
             print('串口5打开！开始放电显示')
 
